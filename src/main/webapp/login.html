@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #34495e;
+        }
+        
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #191919;
+            text-align: center;
+        }
+        
+        .box h1 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .box input[type="text"],
+        .box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+        
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 280px;
+            border-color: #2ecc71;
+        }
+        
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        
+        .box input[type="submit"]:hover {
+            background: #2ecc71;
+        }
+        .dont-have-account{
+         	position: absolute;
+         	bottom: 150px;
+        	right: 450px;
+        	width: 400px;
+        	height: 30px;
+         	font-size: 14px;
+            text-align: bottom;
+            color: yellow;
+            margin: 20px 0;
+        }
+        .dont-have-account a {
+        	text-decoration: none;
+        	color: #f1f1f1;
+        }
+        
+        .forget-password {
+			position: absolute;
+			bottom: 150px;
+			right: 300px;
+			width: 400px;
+			height: 30px;
+			font-size: 14px;
+			text-align: bottom;
+			color: yellow;
+			margin: 20px 0;
+		}
+        
+        .forget-password a {
+			text-decoration: none;
+			margin-left:  0% ;
+			color:  #f1f1f1;
+		}
+    </style>
+</head>
+
+<body>
+	 <form class="box" action="LoginServlet" method="post">
+        <h1>Login</h1>
+        <input type="text" name="id" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input class="submit" type="submit" name="submit" flag="${true}" value="Login">
+        
+    </form>
+    <div class="dont-have-account">
+            Don't have an website account?
+            <a href="./register.html">Register</a>
+        </div>
+    <div class="forget-password">
+       		Forget password?
+         	<a href="./forget.html">Find</a>
+        </div>
+       
+</body>
+</html>

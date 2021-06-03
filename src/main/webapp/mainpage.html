@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    .quick {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        width: 100px;
+        height: 200px;
+    }
+    
+    .quick a {
+        display: block;
+        width: 100px;
+        height: 50px;
+        text-decoration: none;
+        font-size: 14px;
+        background-color: #34495e;
+        color: white;
+    }
+    
+    .quick :hover {
+        color: yellow;
+    }
+    
+    .collection {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .collection p {
+        position: absolute;
+        top: 35px;
+        left: 5px;
+        text-decoration: none;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .userinformation {
+        position: absolute;
+        top: 140px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .userinformation .login {
+        position: absolute;
+        top: 0;
+        width: 100px;
+        height: 20px;
+    }
+    
+    .userinformation .register {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 20px;
+    }
+    
+    .compare {
+        position: relative;
+        top: 170px;
+        left: 350px;
+        width: 600px;
+        height: 55px;
+        color: white;
+        font-size: 14px;
+    }
+    
+    .compare input {
+        position: absolute;
+        width: 530px;
+        height: 43px;
+        border: 1px solid black;
+        font-size: 14px;
+        color: #bfbfbf;
+        padding-left: 30px;
+        
+    }
+   
+    
+    li {
+        list-style: none;
+    }
+    
+    .show {
+        position: relative;
+        bottom: -200px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-color: lightcyan;
+        border-radius: 10%;
+    }
+    
+    .show ul .img1 {
+        position: absolute;
+        bottom: 240px;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        padding-left: 10px;
+        margin-left: 20px;
+    }
+    
+    .show ul .price1 {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        width: 90px;
+        height: 50px;
+        font: Times 12px;
+        color: red;
+        padding-left: 20px;
+        margin-left: 20px;
+    }
+    
+    .show ul .source1 a {
+        position: absolute;
+        bottom: 60px;
+        left: 0px;
+        width: 160px;
+        height: 50px;
+        text-decoration: none;
+        font: Times 14px;
+        color: rgba(111, 24, 119, 0.452);
+        padding-left: 20px;
+        margin-left: 20px;
+    }
+    
+    .show ul .source1 a:hover {
+        color: yellow;
+    }
+    
+    .show ul .img2 {
+        position: absolute;
+        bottom: 240px;
+        left: 300px;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        padding-left: 10px;
+    }
+    
+    .show ul .price2 {
+        position: absolute;
+        bottom: 100px;
+        left: 300px;
+        width: 90px;
+        height: 50px;
+        font: Times 12px;
+        color: red;
+        padding-left: 40px;
+    }
+    
+    .show ul .source2 a {
+        position: absolute;
+        bottom: 60px;
+        left: 300px;
+        width: 160px;
+        height: 50px;
+        text-decoration: none;
+        font: Times 14px;
+        color: rgba(111, 24, 119, 0.452);
+        padding-left: 35px;
+    }
+    
+    .show ul .source2 a:hover {
+        color: yellow;
+    }
+    
+    .show ul .img3 {
+        position: absolute;
+        bottom: 240px;
+        left: 600px;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        padding-left: 10px;
+    }
+    
+    .show ul .price3 {
+        position: absolute;
+        bottom: 100px;
+        left: 600px;
+        width: 90px;
+        height: 50px;
+        font: Times 12px;
+        color: red;
+        padding-left: 40px;
+    }
+    
+    .show ul .source3 a {
+        position: absolute;
+        text-decoration: none;
+        bottom: 60px;
+        left: 600px;
+        width: 160px;
+        height: 50px;
+        font: Times 14px;
+        padding-left: 35px;
+    }
+    
+    .show ul .source3 a:hover {
+        color: yellow;
+    }
+    
+    .show ul .exp {
+        position: absolute;
+        bottom: 240px;
+        right: 150px;
+        width: 200px;
+        height: 30px;
+    }
+    
+    .arrow {
+        position: absolute;
+        bottom: 220px;
+        right: 150px;
+        width: 200px;
+        height: 30px;
+    }
+    
+    .title {
+        position: absolute;
+        bottom: 50px;
+        right: 380px;
+        width: 450px;
+        height: 30px;
+    }
+</style>
+</head>
+<body>
+<body background="background.jpg">
+    <!-- 快速查找 -->
+    <div class="quick">
+        <a href="SearchServlet?id=apple">Apple</a>
+        <a href="SearchServlet?id=华为">Huawei</a>
+        <a href="SearchServlet?id=Samsung">SAMSUNG</a>
+        <a href="SearchServlet?id=小米">XiaoMi</a>
+
+
+    </div>
+    <!-- 搜索模块 -->
+    <form class="compare" action="SearchServlet" method="post">
+        <input type="text" name= "id" value="Input your favourite good" placeholder="Search"/> 
+	</form>
+	
+
+
+    <!-- 展示模块 -->
+    <div class="show">
+        <ul>
+            <li class="img1">
+                <img src="./mainpage_img/1.png" alt=" ">
+            </li>
+            <li class="price1">
+                Lowest price 5499 RMB
+            </li>
+            <li class="source1">
+                <a href="https://www.apple.com.cn/">source: Iphone website</a>
+            </li>
+
+        </ul>
+        <ul>
+            <li class="img2">
+                <img src="./mainpage_img/2.png" alt=" ">
+            </li>
+            <li class="price2">
+                Lowest price 6299 RMB
+            </li>
+            <li class="source2">
+                <a href="https://www.jd.com/">source: jingdong website</a>
+            </li>
+        </ul>
+        <ul>
+            <li class="img3">
+                <img src="./mainpage_img/3.png" alt=" ">
+            </li>
+            <li class="price3">
+                Lowest price 6368 RMB
+            </li>
+            <li class="source3">
+                <a href="https://www.taobao.com/"> source: Taobao website</a>
+            </li>
+        </ul>
+        <ul>
+            <h2 class="exp">
+                Search show
+            </h2>
+        </ul>
+    </div>
+    <div class="arrow">
+        <img src="./mainpage_img/arrow.png" alt=" ">
+    </div>
+    <div class="title">
+        <h1>
+            Compared Iphone 12
+        </h1>
+        <!-- 收藏夹 -->
+    </div>
+    <div class="collection">
+        <a href="FavoriteServlet">
+            <img src="./mainpage_img/collection.png">
+            <p>Favorites</p>
+        </a>
+    </div>
+    <!-- 登录和注册 -->
+    <div class="userinformation">
+        <li class="login">
+            <a href="./login.html">
+                <button>Login</button>
+            </a>
+        </li>
+        <li class="register">
+            <a href="./register.html">
+                <button>Register</button>
+            </a>
+        </li>
+    </div>
+</body>
+</html>
